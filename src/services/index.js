@@ -8,5 +8,9 @@ export default function solve(values) {
 
 worker.addEventListener('message', e => {
   const values = e.data;
-  store.actions.updateCells(values);
+  if (values) {
+    store.actions.updateCells(values);
+  } else {
+    store.actions.setHasError(true);
+  }
 });
