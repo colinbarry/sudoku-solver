@@ -53,6 +53,7 @@ onMounted(() => el.value.focus());
   flex-shrink: 0;
   outline: none;
   background: var(--grid-colour);
+  touch-action: none;
 }
 
 .grid--error {
